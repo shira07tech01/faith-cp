@@ -1,28 +1,49 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <v-app id="app">
+    <Header />
+    <MainVisual />
+    <AboutFaith />
+    <Service/>
+    <Recruit/>
+    <Requirements/>
+    <ContactForm/>
+    <Footer/>
+  </v-app>
 </template>
-
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+
+import Header from './components/Header/Header'
+import MainVisual from './components/MainVisual'
+import AboutFaith from './components/AboutFaith'
+import Service from './components/Service'
+import ContactForm from './components/ContactForm'
+import Footer from './components/Footer'
+import Recruit from './components/Recruit'
+import Requirements from './components/Requirements'
 
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
+  components: { Header, MainVisual, AboutFaith,Service,ContactForm,Footer,Recruit,Requirements},
+  
 }
 </script>
 
-<style>
+<style lang="scss">
+@import './css/reset.css';
+@import url('https://fonts.googleapis.com/earlyaccess/sawarabigothic.css');
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  color:#404feb;
+	font-size: 14px;
+	font-family: "游ゴシック","メイリオ", "Meiryo", sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-weight: bold;
 }
+
+a {
+	color:#404feb;
+	text-decoration:none;
+}
+
 </style>
